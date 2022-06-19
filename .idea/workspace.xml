@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13ac85f4-ec9d-421a-ac06-f0cf697dfc99" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mentormate/Homework_Lesson_10_CalculatorExercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mentormate/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/testng.xml" afterDir="false" />
+    <list default="true" id="13ac85f4-ec9d-421a-ac06-f0cf697dfc99" name="Changes" comment="Homework_Lesson_10">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mentormate/Homework_Lesson_10_CalculatorExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mentormate/Homework_Lesson_10_CalculatorExercise.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +92,14 @@
       <option name="presentableId" value="Default" />
       <updated>1655565366238</updated>
     </task>
+    <task id="LOCAL-00001" summary="Homework_Lesson_10">
+      <created>1655666764510</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655666764510</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +112,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Homework_Lesson_10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework_Lesson_10" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

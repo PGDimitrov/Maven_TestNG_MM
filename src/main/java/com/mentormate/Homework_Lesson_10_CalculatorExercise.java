@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 import java.util.Objects;
 
 public class Homework_Lesson_10_CalculatorExercise {
-
+//Calculator exercise
     @DataProvider(name = "calculator")
     public Object [][] dpMethod (Method m) {
         switch (m.getName()) {
