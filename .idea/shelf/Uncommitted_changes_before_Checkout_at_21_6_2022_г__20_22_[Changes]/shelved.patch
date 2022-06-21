@@ -1,0 +1,172 @@
+Index: src/main/java/com/mentormate/Homework_Lesson_10_CalculatorExercise.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/mentormate/Homework_Lesson_10_CalculatorExercise.java b/src/main/java/com/mentormate/Homework_Lesson_10_CalculatorExercise.java
+new file mode 100644
+--- /dev/null	(date 1655832064411)
++++ b/src/main/java/com/mentormate/Homework_Lesson_10_CalculatorExercise.java	(date 1655832064411)
+@@ -0,0 +1,59 @@
++package com.mentormate;
++
++import org.testng.Assert;
++import org.testng.annotations.DataProvider;
++import org.testng.annotations.Test;
++
++import java.lang.reflect.Method;
++import java.util.Objects;
++
++public class Homework_Lesson_10_CalculatorExercise {
++
++    @DataProvider(name = "calculator")
++    public Object [][] dpMethod (Method m) {
++        switch (m.getName()) {
++            case "sum":
++                return new Object[][] {{4, 2, 6}, {5, 10, 15}};
++            case "minus":
++                return new Object[][] {{4, 2, 2}, {5, 10, -5}};
++            case "multiplication":
++                return new Object[][] {{4, 2, 8}, {5, 10, 50}};
++            case "division":
++                return new Object[][] {{4, 2, 2}, {50, 10, 5}};
++            case "modul":
++                return new Object[][] {{8, 4, 0}, {15, 5, 0}};
++        }
++        return null;
++    }
++
++    @Test(dataProvider = "calculator", groups = "group1")
++    public void sum (int a, int b, int result) {
++        int sum = a + b;
++        Assert.assertEquals(result, sum);
++    }
++
++    @Test(dataProvider = "calculator", groups = "group2")
++    public void minus (int a, int b, int result) {
++        int minus = a - b;
++        Assert.assertEquals(result, minus);
++    }
++
++    @Test(dataProvider = "calculator", groups = "group3")
++    public void multiplication (int a, int b, int result) {
++        int multiplication = a * b;
++        Assert.assertEquals(result, multiplication);
++    }
++
++    @Test(dataProvider = "calculator", groups = "group4")
++    public void division (int a, int b, int result) {
++        int division = a / b;
++        Assert.assertEquals(result, division);
++    }
++
++    @Test(dataProvider = "calculator", groups = "group5")
++    public void modul (int a, int b, int result) {
++        int modul = a % b;
++        Assert.assertEquals(result, modul);
++    }
++
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"13ac85f4-ec9d-421a-ac06-f0cf697dfc99\" name=\"Changes\" comment=\"Master\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"AnnotationType\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Homework_Lesson_10\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2AktMHMtMXMFtzUZGJ1Vu9nWI4I\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.0\",\r\n    \"settings.editor.selected.configurable\": \"terminal\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"com.mentormate\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml\">\r\n    <configuration name=\"C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Maven_TestNG_MM_PetarDimitrov\" />\r\n      <option name=\"SUITE_NAME\" value=\"$PROJECT_DIR$/src/main/resources/testng.xml\" />\r\n      <option name=\"TEST_OBJECT\" value=\"SUITE\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Homework_Lesson_10_CalculatorExercise\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Maven_TestNG_MM_PetarDimitrov\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.mentormate.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com.mentormate\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.mentormate.Homework_Lesson_10_CalculatorExercise\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"TestNG.Homework_Lesson_10_CalculatorExercise\" />\r\n        <item itemvalue=\"TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml\" />\r\n        <item itemvalue=\"TestNG.Homework_Lesson_10_CalculatorExercise\" />\r\n        <item itemvalue=\"TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml\" />\r\n        <item itemvalue=\"TestNG.Homework_Lesson_10_CalculatorExercise\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"13ac85f4-ec9d-421a-ac06-f0cf697dfc99\" name=\"Changes\" comment=\"\" />\r\n      <created>1655565366238</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1655565366238</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Homework_Lesson_10_CalculatorExercise\">\r\n      <created>1655664994264</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1655664994264</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Master\">\r\n      <created>1655666504187</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1655666504187</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Homework_Lesson_10_CalculatorExercise\" />\r\n    <MESSAGE value=\"Master\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Master\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1d9b27758caac7d66f184649bbaae44571ccdf22)
++++ b/.idea/workspace.xml	(date 1655832148823)
+@@ -4,7 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="13ac85f4-ec9d-421a-ac06-f0cf697dfc99" name="Changes" comment="Master" />
++    <list default="true" id="13ac85f4-ec9d-421a-ac06-f0cf697dfc99" name="Changes" comment="Homework_Lesson_10" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -19,11 +19,6 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="Homework_Lesson_10" />
+-      </map>
+-    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+@@ -35,17 +30,17 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "last_opened_file_path": "C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.0",
+-    "settings.editor.selected.configurable": "terminal"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CreateClassDialog.RecentsKey">
+       <recent name="com.mentormate" />
+@@ -81,9 +76,6 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="TestNG.Homework_Lesson_10_CalculatorExercise" />
+-        <item itemvalue="TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml" />
+-        <item itemvalue="TestNG.Homework_Lesson_10_CalculatorExercise" />
+         <item itemvalue="TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml" />
+         <item itemvalue="TestNG.Homework_Lesson_10_CalculatorExercise" />
+       </list>
+@@ -98,21 +90,6 @@
+       <option name="presentableId" value="Default" />
+       <updated>1655565366238</updated>
+     </task>
+-    <task id="LOCAL-00001" summary="Homework_Lesson_10_CalculatorExercise">
+-      <created>1655664994264</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1655664994264</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="Master">
+-      <created>1655666504187</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1655666504187</updated>
+-    </task>
+-    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -127,9 +104,8 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="Homework_Lesson_10_CalculatorExercise" />
+-    <MESSAGE value="Master" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Master" />
++    <MESSAGE value="Homework_Lesson_10" />
++    <option name="LAST_COMMIT_MESSAGE" value="Homework_Lesson_10" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
