@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38359427-e46e-43e6-a3ca-a53bb42824d7" name="Changes" comment="Homework_Lesson_10">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mentormate/Homework_Lesson_10_CalculatorExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mentormate/Homework_Lesson_10_CalculatorExercise.java" afterDir="false" />
-    </list>
+    <list default="true" id="13ac85f4-ec9d-421a-ac06-f0cf697dfc99" name="Changes" comment="Master" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,18 +21,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Homework_Lesson_10" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="recentNewPullRequestHead">
-      <RepoCoordinatesHolder>
-        <option name="owner" value="PGDimitrov" />
-        <option name="repository" value="Maven_TestNG_MM_PetarDimitrov" />
-      </RepoCoordinatesHolder>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,17 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "terminal"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.mentormate" />
@@ -92,6 +81,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Homework_Lesson_10_CalculatorExercise" />
         <item itemvalue="TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml" />
         <item itemvalue="TestNG.Homework_Lesson_10_CalculatorExercise" />
         <item itemvalue="TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml" />
@@ -108,28 +98,21 @@
       <option name="presentableId" value="Default" />
       <updated>1655565366238</updated>
     </task>
-    <task id="LOCAL-00001" summary="Homework_Lesson_10">
-      <created>1655666764510</created>
+    <task id="LOCAL-00001" summary="Homework_Lesson_10_CalculatorExercise">
+      <created>1655664994264</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1655666764510</updated>
+      <updated>1655664994264</updated>
     </task>
-    <task id="LOCAL-00002" summary="Homework_Lesson_10">
-      <created>1655666908019</created>
+    <task id="LOCAL-00002" summary="Master">
+      <created>1655666504187</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1655666908019</updated>
+      <updated>1655666504187</updated>
     </task>
-    <task id="LOCAL-00003" summary="Homework_Lesson_10">
-      <created>1655827545233</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1655827545233</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,8 +127,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Homework_Lesson_10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework_Lesson_10" />
+    <MESSAGE value="Homework_Lesson_10_CalculatorExercise" />
+    <MESSAGE value="Master" />
+    <option name="LAST_COMMIT_MESSAGE" value="Master" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
