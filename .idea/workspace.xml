@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13ac85f4-ec9d-421a-ac06-f0cf697dfc99" name="Changes" comment="Homework_Lesson_10" />
+    <list default="true" id="38359427-e46e-43e6-a3ca-a53bb42824d7" name="Changes" comment="Homework_Lesson_10">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mentormate/Homework_Lesson_10_CalculatorExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mentormate/Homework_Lesson_10_CalculatorExercise.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Homework_Lesson_10" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,6 +92,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml" />
+        <item itemvalue="TestNG.Homework_Lesson_10_CalculatorExercise" />
         <item itemvalue="TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml" />
         <item itemvalue="TestNG.Homework_Lesson_10_CalculatorExercise" />
       </list>
