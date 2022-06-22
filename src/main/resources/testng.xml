@@ -1,7 +1,7 @@
 <suite name="Test-method Suite" parallel="methods" thread-count="5" >
     <test name="Test-method test" group-by-instances="true">
         <classes>
-            <class name="com.mentormate.Homework_Lesson_10_CalculatorExercise" />
+            <class name="com.mentormate.Homework_Lesson_12" />
         </classes>
     </test>
 </suite>

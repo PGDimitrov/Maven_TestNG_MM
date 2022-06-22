@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13ac85f4-ec9d-421a-ac06-f0cf697dfc99" name="Changes" comment="Master">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mentormate/Homework_Lesson_10_CalculatorExercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_6_2022___20_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_6_2022___20_22__Changes_.xml" afterDir="false" />
+    <list default="true" id="13ac85f4-ec9d-421a-ac06-f0cf697dfc99" name="Changes" comment="Homework_Lesson_12.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mentormate/Homework_Lesson_12.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,13 +83,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Homework_Lesson_12.testLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Maven_TestNG_MM_PetarDimitrov" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mentormate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mentormate" />
+      <option name="MAIN_CLASS_NAME" value="com.mentormate.Homework_Lesson_12" />
+      <option name="METHOD_NAME" value="testLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml" />
+        <item itemvalue="TestNG.Homework_Lesson_12.testLogin" />
+        <item itemvalue="TestNG.Homework_Lesson_10_CalculatorExercise" />
         <item itemvalue="TestNG.Homework_Lesson_10_CalculatorExercise" />
         <item itemvalue="TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml" />
-        <item itemvalue="TestNG.Homework_Lesson_10_CalculatorExercise" />
-        <item itemvalue="TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml" />
-        <item itemvalue="TestNG.Homework_Lesson_10_CalculatorExercise" />
       </list>
     </recent_temporary>
   </component>
@@ -123,7 +141,28 @@
       <option name="project" value="LOCAL" />
       <updated>1655834212930</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Homework_Lesson_10_CalculatorExercise">
+      <created>1655835429136</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655835429136</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Homework_Lesson_10_CalculatorExercise">
+      <created>1655835465522</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655835465522</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Homework_Lesson_10_CalculatorExercise">
+      <created>1655835478827</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655835478827</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,9 +189,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Homework_Lesson_10_CalculatorExercise" />
     <MESSAGE value="Master" />
-    <option name="LAST_COMMIT_MESSAGE" value="Master" />
+    <MESSAGE value="Homework_Lesson_10_CalculatorExercise" />
+    <MESSAGE value="Homework_Lesson_12.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework_Lesson_12.java" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
