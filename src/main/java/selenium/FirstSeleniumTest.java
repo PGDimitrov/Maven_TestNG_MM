@@ -107,4 +107,48 @@ public class FirstSeleniumTest {
 
         Thread.sleep(2000);
     }
+
+    @Test
+    public void testProfilePage () throws InterruptedException {
+
+        driver.get("http://training.skillo-bg.com/users/login");
+
+        By userNameBy = By.cssSelector("#defaultLoginFormUsername");
+        WebElement userName = driver.findElement(userNameBy);
+
+        By passwordBy = By.cssSelector("#defaultLoginFormPassword");
+        WebElement password = driver.findElement(passwordBy);
+
+        By signInButtonBy = By.cssSelector("#sign-in-button");
+        WebElement signInButton = driver.findElement(signInButtonBy);
+
+        userName.click();
+        userName.clear();
+        userName.sendKeys("test01234");
+        password.click();
+        password.clear();
+        password.sendKeys("test43210");
+        signInButton.click();
+
+        By profileLinkBy = By.cssSelector("#nav-link-profile");
+        WebElement profileLink = driver.findElement(profileLinkBy);
+
+        profileLink.click();
+
+        By profileNameBy = By.xpath("//h2[contains(text(),'test01234')]");
+        Assert.assertTrue(driver.findElement(profileNameBy).isDisplayed());
+
+        By profilePicture = By.xpath("//div[@class='image-container']");
+        Assert.assertTrue(driver.findElement(profilePicture).isDisplayed());
+
+        By logOutButtonBy = By.cssSelector("i[class='fas fa-sign-out-alt fa-lg']");
+//        wait.until(ExpectedConditions.visibilityOf(driver.findElement(logOutButton)));
+        Assert.assertTrue(driver.findElement(logOutButtonBy).isDisplayed());
+
+        WebElement logoutButton = driver.findElement(logOutButtonBy);
+        logoutButton.click();
+
+        Thread.sleep(2000);
+
+    }
 }
