@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13ac85f4-ec9d-421a-ac06-f0cf697dfc99" name="Changes" comment="Homework_Lesson_12.java">
-      <change afterPath="$PROJECT_DIR$/src/main/java/selenium/FirstSeleniumTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_6_2022___20_22__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_6_2022_г__20_22_[Changes]/shelved.patch" beforeDir="false" />
+    <list default="true" id="13ac85f4-ec9d-421a-ac06-f0cf697dfc99" name="Changes" comment="Homework_Lesson_17_practice">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/selenium/FirstSeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/selenium/FirstSeleniumTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,17 +62,7 @@
       <recent name="com.mentormate" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FirstSeleniumTest">
-    <configuration name="C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Maven_TestNG_MM_PetarDimitrov" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.FirstSeleniumTest.testProfilePage">
     <configuration name="FirstSeleniumTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Maven_TestNG_MM_PetarDimitrov" />
       <extension name="coverage">
@@ -93,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstSeleniumTest.firstSeleniumTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstSeleniumTest.testLoginPage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Maven_TestNG_MM_PetarDimitrov" />
       <extension name="coverage">
         <pattern>
@@ -103,7 +90,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="selenium" />
       <option name="MAIN_CLASS_NAME" value="selenium.FirstSeleniumTest" />
-      <option name="METHOD_NAME" value="firstSeleniumTest" />
+      <option name="METHOD_NAME" value="testLoginPage" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -111,16 +98,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Homework_Lesson_10_CalculatorExercise" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstSeleniumTest.testProfilePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Maven_TestNG_MM_PetarDimitrov" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mentormate.*" />
+          <option name="PATTERN" value="selenium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mentormate" />
-      <option name="MAIN_CLASS_NAME" value="com.mentormate.Homework_Lesson_10_CalculatorExercise" />
+      <option name="PACKAGE_NAME" value="selenium" />
+      <option name="MAIN_CLASS_NAME" value="selenium.FirstSeleniumTest" />
+      <option name="METHOD_NAME" value="testProfilePage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MobileBg" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Maven_TestNG_MM_PetarDimitrov" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium" />
+      <option name="MAIN_CLASS_NAME" value="selenium.MobileBg" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -128,17 +133,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Homework_Lesson_12.testLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MobileBg.testMobileBg" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Maven_TestNG_MM_PetarDimitrov" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mentormate.*" />
+          <option name="PATTERN" value="selenium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mentormate" />
-      <option name="MAIN_CLASS_NAME" value="com.mentormate.Homework_Lesson_12" />
-      <option name="METHOD_NAME" value="testLogin" />
+      <option name="PACKAGE_NAME" value="selenium" />
+      <option name="MAIN_CLASS_NAME" value="selenium.MobileBg" />
+      <option name="METHOD_NAME" value="testMobileBg" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -148,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.FirstSeleniumTest.testProfilePage" />
+        <item itemvalue="TestNG.MobileBg.testMobileBg" />
+        <item itemvalue="TestNG.MobileBg" />
+        <item itemvalue="TestNG.FirstSeleniumTest.testLoginPage" />
         <item itemvalue="TestNG.FirstSeleniumTest" />
-        <item itemvalue="TestNG.FirstSeleniumTest.firstSeleniumTest" />
-        <item itemvalue="TestNG.C:/Users/Petar/IdeaProjects/Maven_TestNG_MM_PetarDimitrov/src/main/resources/testng.xml" />
-        <item itemvalue="TestNG.Homework_Lesson_12.testLogin" />
-        <item itemvalue="TestNG.Homework_Lesson_10_CalculatorExercise" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +219,28 @@
       <option name="project" value="LOCAL" />
       <updated>1655930304781</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Homework_Lesson_16">
+      <created>1657125345458</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657125345458</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Homework_Lesson_17_practice">
+      <created>1657451085209</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657451085209</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Homework_Lesson_17_practice">
+      <created>1657471712258</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657471712258</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +270,9 @@
     <MESSAGE value="Master" />
     <MESSAGE value="Homework_Lesson_10_CalculatorExercise" />
     <MESSAGE value="Homework_Lesson_12.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework_Lesson_12.java" />
+    <MESSAGE value="Homework_Lesson_16" />
+    <MESSAGE value="Homework_Lesson_17_practice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework_Lesson_17_practice" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
