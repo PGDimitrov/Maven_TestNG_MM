@@ -92,4 +92,26 @@ public class Herokuapp {
 
         Thread.sleep(2000);
     }
+
+    @Test
+    public void testChallengingDom () {
+
+        driver.get("https://the-internet.herokuapp.com/challenging_dom");
+
+        By pageTitle = By.xpath("//h3[contains(text(),'Challenging DOM')]");
+        By firstParagraph = By.xpath("//p");
+        By listButtons = By.xpath("//div[@class='large-2 columns']/a");
+        By table = By.xpath("//div[@class='large-10 columns']/table");
+        By actionEdit = By.linkText("edit");
+        By actionDelete = By.linkText("delete");
+        By canvas = By.cssSelector("#canvas");
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(firstParagraph).getText().contains("The hardest part in automated web testing is finding the best locators"));
+        Assert.assertEquals(driver.findElements(listButtons).size(), 3);
+        Assert.assertTrue(driver.findElement(table).isDisplayed());
+        Assert.assertTrue(driver.findElement(actionEdit).isDisplayed());
+        Assert.assertTrue(driver.findElement(actionDelete).isDisplayed());
+        Assert.assertTrue(driver.findElement(canvas).isDisplayed());
+    }
 }

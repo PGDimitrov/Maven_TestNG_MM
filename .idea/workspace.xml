@@ -62,7 +62,7 @@
       <recent name="com.mentormate" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Herokuapp.testBasicAuth">
+  <component name="RunManager" selected="TestNG.Herokuapp.testChallengingDom">
     <configuration name="FirstSeleniumTest.testProfilePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Maven_TestNG_MM_PetarDimitrov" />
       <extension name="coverage">
@@ -117,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MobileBg" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Herokuapp.testChallengingDom" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Maven_TestNG_MM_PetarDimitrov" />
       <extension name="coverage">
         <pattern>
@@ -126,8 +126,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="selenium" />
-      <option name="MAIN_CLASS_NAME" value="selenium.MobileBg" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="selenium.Herokuapp" />
+      <option name="METHOD_NAME" value="testChallengingDom" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -154,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Herokuapp.testChallengingDom" />
         <item itemvalue="TestNG.Herokuapp.testBasicAuth" />
         <item itemvalue="TestNG.Herokuapp.testAddRemoveElements" />
         <item itemvalue="TestNG.FirstSeleniumTest.testProfilePage" />
         <item itemvalue="TestNG.MobileBg.testMobileBg" />
-        <item itemvalue="TestNG.MobileBg" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657910513237</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Homework_Lesson_18_practice">
+      <created>1657914853384</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1657914853384</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
