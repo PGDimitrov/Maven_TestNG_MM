@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -45,7 +46,7 @@ public class Herokuapp {
     }
 
     @Test
-    public void testAddRemoveElements () throws InterruptedException {
+    public void testAddRemoveElements () {
 
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
 
@@ -76,7 +77,19 @@ public class Herokuapp {
         driver.findElement(buttonDelete).click();
         listButtonDeletes = driver.findElements(listButtonDelete);
         Assert.assertEquals(listButtonDeletes.size(), 2);
-
     }
 
+    @Test
+    public void testBasicAuth () throws InterruptedException {
+
+        driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+
+        By pageTitle = By.xpath("//h3[contains(text(),'Basic Auth')]");
+        By successfulMessage = By.xpath("//p[contains(text(),'Congratulations! You must have the proper credentials.')]");
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(successfulMessage).isDisplayed());
+
+        Thread.sleep(2000);
+    }
 }
