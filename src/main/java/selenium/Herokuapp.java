@@ -131,5 +131,18 @@ public class Herokuapp {
         Assert.assertFalse(CheckboxOne.isSelected());
         Assert.assertTrue(CheckboxTwo.isSelected());
 
+        CheckboxOne.click();
+        Assert.assertTrue(CheckboxOne.isSelected());
+
+        CheckboxOne.click();
+        Assert.assertFalse(CheckboxOne.isSelected());
+
+        CheckboxTwo.click();
+        Assert.assertFalse(CheckboxTwo.isSelected());
+
+        CheckboxTwo.click();
+        Assert.assertTrue(CheckboxTwo.isSelected());
+
+
     }
 }
