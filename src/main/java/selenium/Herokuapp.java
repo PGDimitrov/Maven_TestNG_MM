@@ -171,4 +171,45 @@ public class Herokuapp {
         alert.accept();
 
     }
+
+    @Test
+    public void testDisappearingElements () {
+
+        driver.get("https://the-internet.herokuapp.com/disappearing_elements");
+
+        By pageTitle = By.xpath("//h3[contains(text(),'Disappearing Elements')]");
+
+    }
+
+    @Test
+    public void testDragAndDrop () {
+        driver.get("https://jqueryui.com/droppable/");
+
+        By pageTitle = By.xpath("//h1[contains(text(),'Droppable')]");
+        By dragMe = By.xpath(" //div[@id='draggable']");
+        By dropHere = By.xpath("//div[@id='droppable']");
+        By textBeforeDrop = By.xpath("//p[contains(text(),'Drop here')]");
+        By textAfterDrop = By.xpath("//p[contains(text(),'Dropped')]");
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+
+        WebElement iFrame = driver.findElement(By.xpath("//iframe"));
+
+        driver.switchTo().frame(iFrame);
+
+        WebElement elementA = driver.findElement(dragMe);
+        WebElement elementB = driver.findElement(dropHere);
+        WebElement beforeDropText = driver.findElement(textBeforeDrop);
+
+
+        Assert.assertTrue(elementA.isDisplayed());
+        Assert.assertTrue(elementB.isDisplayed());
+        Assert.assertTrue(beforeDropText.isDisplayed());
+
+        actions.dragAndDrop(elementA, elementB).perform();
+
+        WebElement afterDropText = driver.findElement(textAfterDrop);
+        Assert.assertTrue(afterDropText.isDisplayed());
+
+    }
 }
