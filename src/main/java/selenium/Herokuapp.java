@@ -1,11 +1,13 @@
 package selenium;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -20,6 +22,8 @@ public class Herokuapp {
 
     public WebDriver driver;
     public WebDriverWait wait;
+
+    Actions actions;
 
     @BeforeMethod
     public void setUp() {
@@ -37,6 +41,7 @@ public class Herokuapp {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         //Explicit wait
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        actions = new Actions(driver);
     }
 
     @AfterMethod
@@ -128,7 +133,9 @@ public class Herokuapp {
 
         Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
         Assert.assertTrue(driver.findElement(checkboxesForm).isDisplayed());
+        Assert.assertTrue(CheckboxOne.isDisplayed());
         Assert.assertFalse(CheckboxOne.isSelected());
+        Assert.assertTrue(CheckboxTwo.isDisplayed());
         Assert.assertTrue(CheckboxTwo.isSelected());
 
         CheckboxOne.click();
@@ -143,6 +150,25 @@ public class Herokuapp {
         CheckboxTwo.click();
         Assert.assertTrue(CheckboxTwo.isSelected());
 
+    }
+
+    @Test
+    public void testContextMenu () {
+
+        driver.get("https://the-internet.herokuapp.com/context_menu");
+
+        By pageTitle = By.xpath("//h3[contains(text(),'Context Menu')]");
+        By box = By.xpath("//div[@id='hot-spot']");
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(box).isDisplayed());
+
+        actions.contextClick(driver.findElement(box)).perform();
+
+        Alert alert = driver.switchTo().alert();
+
+        Assert.assertEquals(alert.getText(),"You selected a context menu");
+        alert.accept();
 
     }
 }
