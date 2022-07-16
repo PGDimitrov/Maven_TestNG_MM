@@ -114,4 +114,22 @@ public class Herokuapp {
         Assert.assertTrue(driver.findElement(actionDelete).isDisplayed());
         Assert.assertTrue(driver.findElement(canvas).isDisplayed());
     }
+
+    @Test
+    public void testCheckboxes () {
+
+        driver.get("https://the-internet.herokuapp.com/checkboxes");
+
+        By pageTitle = By.xpath("//h3[contains(text(),'Checkboxes')]");
+        By checkboxesForm = By.cssSelector("#checkboxes");
+        By checkboxesList = By.xpath("//form[@id='checkboxes']/input");
+        WebElement CheckboxOne = driver.findElements(checkboxesList).get(0);
+        WebElement CheckboxTwo = driver.findElements(checkboxesList).get(1);
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(checkboxesForm).isDisplayed());
+        Assert.assertFalse(CheckboxOne.isSelected());
+        Assert.assertTrue(CheckboxTwo.isSelected());
+
+    }
 }
