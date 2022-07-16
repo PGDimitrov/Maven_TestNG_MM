@@ -211,5 +211,7 @@ public class Herokuapp {
         WebElement afterDropText = driver.findElement(textAfterDrop);
         Assert.assertTrue(afterDropText.isDisplayed());
 
+        driver.switchTo().parentFrame();
+
     }
 }
