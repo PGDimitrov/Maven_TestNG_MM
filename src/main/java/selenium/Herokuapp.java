@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -234,6 +235,28 @@ public class Herokuapp {
         Assert.assertTrue(afterDropText.isDisplayed());
 
         driver.switchTo().parentFrame();
+
+    }
+
+    @Test
+    public void testDropdown () {
+
+        driver.get("https://the-internet.herokuapp.com/dropdown");
+
+        By pageTitle = By.xpath("//h3[contains(text(),'Dropdown List')]");
+        By dropdown = By.xpath("//select[@id='dropdown']");
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(dropdown).isDisplayed());
+        Assert.assertTrue(driver.findElement(dropdown).getText().contains("Please select an option"));
+
+        Select option1dropdown = new Select(driver.findElement(dropdown));
+        option1dropdown.selectByVisibleText("Option 1");
+        Assert.assertTrue(driver.findElement(dropdown).getText().contains("Option 1"));
+
+        Select option2dropdown = new Select(driver.findElement(dropdown));
+        option2dropdown.selectByVisibleText("Option 2");
+        Assert.assertTrue(driver.findElement(dropdown).getText().contains("Option 2"));
 
     }
 }
