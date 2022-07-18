@@ -178,7 +178,29 @@ public class Herokuapp {
         driver.get("https://the-internet.herokuapp.com/disappearing_elements");
 
         By pageTitle = By.xpath("//h3[contains(text(),'Disappearing Elements')]");
+        By listButtons = By.xpath("//ul/li");
+        By homeButton = By.xpath("//a[contains(text(),'Home')]");
+        By aboutButton = By.xpath("//a[contains(text(),'About')]");
+        By contactUsButton = By.xpath("//a[contains(text(),'Contact Us')]");
+        By portfolioButton = By.xpath("//a[contains(text(),'Portfolio')]");
+        By galleryButton = By.xpath("//a[contains(text(),'Gallery')]");
 
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(listButtons).isDisplayed());
+
+        List<WebElement> listOfButtons = driver.findElements(listButtons);
+        if (listOfButtons.size() ==4){
+            Assert.assertTrue(driver.findElement(homeButton).isDisplayed());
+            Assert.assertTrue(driver.findElement(aboutButton).isDisplayed());
+            Assert.assertTrue(driver.findElement(contactUsButton).isDisplayed());
+            Assert.assertTrue(driver.findElement(portfolioButton).isDisplayed());
+        } else if (listOfButtons.size() ==5) {
+            Assert.assertTrue(driver.findElement(homeButton).isDisplayed());
+            Assert.assertTrue(driver.findElement(aboutButton).isDisplayed());
+            Assert.assertTrue(driver.findElement(contactUsButton).isDisplayed());
+            Assert.assertTrue(driver.findElement(portfolioButton).isDisplayed());
+            Assert.assertTrue(driver.findElement(galleryButton).isDisplayed());
+        }
     }
 
     @Test
