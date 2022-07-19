@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -306,6 +307,56 @@ public class Herokuapp {
             System.out.println("YYY2: " +listImagesAfter.get(i).getAttribute("src"));
             Assert.assertNotEquals(listImages.get(i), listImagesAfter.get(i).getAttribute("src"));
         }
+    }
+
+    @Test
+    public void testDynamicControls () {
+
+        driver.get("https://the-internet.herokuapp.com/dynamic_controls");
+
+        By pageTitle = By.xpath("//h4[contains(text(),'Dynamic Controls')]");
+        By checkbox = By.xpath("//div[@id='checkbox']");
+        By removeButton = By.xpath("//button[contains(text(),'Remove')]");
+        By addButton = By.xpath("//button[contains(text(),'Add')]");
+        By checkBoxAdded = By.xpath("//input[@id='checkbox']");
+        By enableButton = By.xpath("//button[contains(text(),'Enable')]");
+        By disableButton = By.xpath("//button[contains(text(),'Disable')]");
+        By inputField = By.xpath("//form[@id='input-example']/input");
+
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(checkbox).isDisplayed());
+        Assert.assertTrue(driver.findElement(removeButton).isDisplayed());
+
+        driver.findElement(removeButton).click();
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(addButton)));
+        driver.findElement(By.xpath("//p[@id='message']")).getText();
+        Assert.assertEquals(driver.findElement(By.xpath("//p[@id='message']")).getText(), "It's gone!");
+        Assert.assertTrue(driver.findElement(addButton).isDisplayed());
+
+        driver.findElement(addButton).click();
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(removeButton)));
+//        driver.findElement(By.xpath("//p[@id='message']")).getText();
+        Assert.assertEquals(driver.findElement(By.xpath("//p[@id='message']")).getText(), "It's back!");
+        Assert.assertTrue(driver.findElement(checkBoxAdded).isDisplayed());
+
+
+        Assert.assertTrue(driver.findElement(inputField).isDisplayed());
+        Assert.assertTrue(driver.findElement(enableButton).isDisplayed());
+
+        driver.findElement(enableButton).click();
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(disableButton)));
+//        driver.findElement(By.xpath("//p[@id='message']")).getText();
+        Assert.assertEquals(driver.findElement(By.xpath("//p[@id='message']")).getText(), "It's enabled!");
+        Assert.assertTrue(driver.findElement(disableButton).isDisplayed());
+        Assert.assertTrue(driver.findElement(inputField).isEnabled());
+
+        driver.findElement(disableButton).click();
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(enableButton)));
+        Assert.assertEquals(driver.findElement(By.xpath("//p[@id='message']")).getText(), "It's disabled!");
+        Assert.assertTrue(driver.findElement(enableButton).isDisplayed());
+        Assert.assertFalse(driver.findElement(inputField).isEnabled());
+
     }
 
 }
