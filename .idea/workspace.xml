@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13ac85f4-ec9d-421a-ac06-f0cf697dfc99" name="Changes" comment="Homework_Lesson_18_practice">
+    <list default="true" id="13ac85f4-ec9d-421a-ac06-f0cf697dfc99" name="Changes" comment="Homework_Lesson_19_practice">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/selenium/Herokuapp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/selenium/Herokuapp.java" afterDir="false" />
     </list>
@@ -62,8 +62,8 @@
       <recent name="com.mentormate" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Herokuapp.testDropdown">
-    <configuration name="Herokuapp.testCheckboxes" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.Herokuapp.testDynamicContent">
+    <configuration name="Herokuapp.testChallengingDom" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Maven_TestNG_MM_PetarDimitrov" />
       <extension name="coverage">
         <pattern>
@@ -73,25 +73,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="selenium" />
       <option name="MAIN_CLASS_NAME" value="selenium.Herokuapp" />
-      <option name="METHOD_NAME" value="testCheckboxes" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Herokuapp.testContextMenu" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Maven_TestNG_MM_PetarDimitrov" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="selenium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="selenium" />
-      <option name="MAIN_CLASS_NAME" value="selenium.Herokuapp" />
-      <option name="METHOD_NAME" value="testContextMenu" />
+      <option name="METHOD_NAME" value="testChallengingDom" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -153,13 +135,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Herokuapp.testDynamicContent" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Maven_TestNG_MM_PetarDimitrov" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium" />
+      <option name="MAIN_CLASS_NAME" value="selenium.Herokuapp" />
+      <option name="METHOD_NAME" value="testDynamicContent" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Herokuapp.testDynamicContent" />
+        <item itemvalue="TestNG.Herokuapp.testChallengingDom" />
         <item itemvalue="TestNG.Herokuapp.testDropdown" />
         <item itemvalue="TestNG.Herokuapp.testDisappearingElements" />
         <item itemvalue="TestNG.Herokuapp.testDragAndDrop" />
-        <item itemvalue="TestNG.Herokuapp.testContextMenu" />
-        <item itemvalue="TestNG.Herokuapp.testCheckboxes" />
       </list>
     </recent_temporary>
   </component>
@@ -312,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658166124068</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Homework_Lesson_19_practice">
+      <created>1658168539340</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1658168539340</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -345,7 +352,8 @@
     <MESSAGE value="Homework_Lesson_16" />
     <MESSAGE value="Homework_Lesson_17_practice" />
     <MESSAGE value="Homework_Lesson_18_practice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework_Lesson_18_practice" />
+    <MESSAGE value="Homework_Lesson_19_practice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework_Lesson_19_practice" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

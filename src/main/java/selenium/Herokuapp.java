@@ -17,6 +17,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Herokuapp {
@@ -113,7 +114,7 @@ public class Herokuapp {
         By canvas = By.cssSelector("#canvas");
 
         Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
-        Assert.assertTrue(driver.findElement(firstParagraph).getText().contains("The hardest part in automated web testing is finding the best locators"));
+        Assert.assertTrue(driver.findElement(firstParagraph).getText().contains("The hardest part in automated web testing is finding the best locators (e.g., ones that well named, unique, and unlikely to change). It's more often than not that the application you're testing was not built with this concept in mind. This example demonstrates that with unique IDs, a table with no helpful locators, and a canvas element."));
         Assert.assertEquals(driver.findElements(listButtons).size(), 3);
         Assert.assertTrue(driver.findElement(table).isDisplayed());
         Assert.assertTrue(driver.findElement(actionEdit).isDisplayed());
@@ -259,4 +260,52 @@ public class Herokuapp {
         Assert.assertTrue(driver.findElement(dropdown).getText().contains("Option 2"));
 
     }
+
+    @Test
+    public void testDynamicContent() {
+
+        driver.get("https://the-internet.herokuapp.com/dynamic_content");
+
+        By pageTitle = By.xpath("//h3[contains(text(),'Dynamic Content')]");
+        By buttonClickHere = By.xpath("//a[contains(text(),'click here')]");
+        By rowsImages = By.cssSelector("#content img");
+        By rowsTexts = By.xpath("//div[@class='large-10 columns']");
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(buttonClickHere).isDisplayed());
+
+        List<WebElement> listTextsElements = driver.findElements(rowsTexts);
+        List<WebElement> listImagesElements = driver.findElements(rowsImages);
+
+        List<String> listImages = new ArrayList<>();
+        for (WebElement element: listImagesElements
+             ) {
+                listImages.add(element.getAttribute("src"));
+        };
+
+        List<String> listTexts = new ArrayList<>();
+        for (WebElement element: listTextsElements
+        ) {
+            listTexts.add(element.getText());
+        };
+
+        WebElement clickHere = driver.findElement(buttonClickHere);
+        clickHere.click();
+
+        List<WebElement> listTextsAfter = driver.findElements(rowsTexts);
+        List<WebElement> listImagesAfter = driver.findElements(rowsImages);
+
+        for (int i = 0; i < listTextsAfter.size(); i++) {
+            System.out.println("XXX: " +listTexts.get(i));
+            System.out.println("XXX2: " +listTextsAfter.get(i).getText());
+            Assert.assertNotEquals(listTexts.get(i), listTextsAfter.get(i).getText());
+        }
+
+        for (int i = 0; i < listImagesAfter.size(); i++) {
+            System.out.println("YYY: " +listImages.get(i));
+            System.out.println("YYY2: " +listImagesAfter.get(i).getAttribute("src"));
+            Assert.assertNotEquals(listImages.get(i), listImagesAfter.get(i).getAttribute("src"));
+        }
+    }
+
 }
