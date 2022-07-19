@@ -471,6 +471,34 @@ public class Herokuapp {
 
         Assert.assertTrue(driver.findElement(newWindowTitle).isDisplayed());
 
+        driver.switchTo().window(originalWindow);
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(clickHereButton).isDisplayed());
+
+        driver.switchTo().window(newWindow);
+        Assert.assertTrue(driver.findElement(newWindowTitle).isDisplayed());
+
+    }
+
+    @Test
+    public void testRedirectLink () {
+
+        driver.get("https://the-internet.herokuapp.com/redirector");
+
+        By pageTitle = By.xpath("//h3[contains(text(),'Redirection')]");
+        By hereRedirectLink = By.xpath("//a[@id='redirect']");
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(hereRedirectLink).isDisplayed());
+
+        String originalURL = driver.getCurrentUrl();
+        Assert.assertEquals(originalURL, "https://the-internet.herokuapp.com/redirector");
+
+        driver.findElement(hereRedirectLink).click();
+        String redirectedURL = driver.getCurrentUrl();
+        Assert.assertEquals(redirectedURL, "https://the-internet.herokuapp.com/status_codes");
+        By redirectedPageTitle = By.xpath("//h3[contains(text(),'Status Codes')]");
+        Assert.assertTrue(driver.findElement(redirectedPageTitle).isDisplayed());
     }
 
 }
