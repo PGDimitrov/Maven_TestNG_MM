@@ -62,7 +62,7 @@
       <recent name="com.mentormate" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Herokuapp.testDynamicControls">
+  <component name="RunManager" selected="TestNG.Herokuapp.testFloatingMenu">
     <configuration name="Herokuapp.testChallengingDom" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Maven_TestNG_MM_PetarDimitrov" />
       <extension name="coverage">
@@ -74,24 +74,6 @@
       <option name="PACKAGE_NAME" value="selenium" />
       <option name="MAIN_CLASS_NAME" value="selenium.Herokuapp" />
       <option name="METHOD_NAME" value="testChallengingDom" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Herokuapp.testDisappearingElements" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Maven_TestNG_MM_PetarDimitrov" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="selenium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="selenium" />
-      <option name="MAIN_CLASS_NAME" value="selenium.Herokuapp" />
-      <option name="METHOD_NAME" value="testDisappearingElements" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -153,13 +135,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Herokuapp.testFloatingMenu" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Maven_TestNG_MM_PetarDimitrov" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium" />
+      <option name="MAIN_CLASS_NAME" value="selenium.Herokuapp" />
+      <option name="METHOD_NAME" value="testFloatingMenu" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Herokuapp.testFloatingMenu" />
         <item itemvalue="TestNG.Herokuapp.testDynamicControls" />
         <item itemvalue="TestNG.Herokuapp.testDynamicContent" />
         <item itemvalue="TestNG.Herokuapp.testChallengingDom" />
         <item itemvalue="TestNG.Herokuapp.testDropdown" />
-        <item itemvalue="TestNG.Herokuapp.testDisappearingElements" />
       </list>
     </recent_temporary>
   </component>
@@ -326,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658223484286</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Homework_Lesson_19_practice">
+      <created>1658235358954</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1658235358954</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

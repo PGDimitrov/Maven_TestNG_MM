@@ -1,10 +1,7 @@
 package selenium;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
@@ -20,13 +17,16 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executor;
 
 public class Herokuapp {
 
     public WebDriver driver;
     public WebDriverWait wait;
 
+
     Actions actions;
+    JavascriptExecutor executor;
 
     @BeforeMethod
     public void setUp() {
@@ -45,6 +45,7 @@ public class Herokuapp {
         //Explicit wait
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         actions = new Actions(driver);
+        executor = (JavascriptExecutor) driver;
     }
 
     @AfterMethod
@@ -358,5 +359,43 @@ public class Herokuapp {
         Assert.assertFalse(driver.findElement(inputField).isEnabled());
 
     }
+
+    @Test
+    public void testDynamicLoading () {
+
+        driver.get("https://the-internet.herokuapp.com/dynamic_loading");
+
+        By pageTitle = By.xpath("//h3[contains(text(),'Dynamically Loaded Page Elements')]");
+
+    }
+
+    @Test
+    public void testFloatingMenu () {
+
+        driver.get("https://the-internet.herokuapp.com/floating_menu");
+
+        By pageTitle = By.xpath("//h3[contains(text(),'Floating Menu')]");
+        By menu = By.xpath("//div[@id='menu']");
+        By homeButton = By.xpath("//a[contains(text(),'Home')]");
+        By newsButton = By.xpath("//a[contains(text(),'News')]");
+        By contactButton = By.xpath("//a[contains(text(),'Contact')]");
+        By aboutButton = By.xpath("//a[contains(text(),'About')]");
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(menu).isDisplayed());
+        Assert.assertTrue(driver.findElement(homeButton).isDisplayed());
+        Assert.assertTrue(driver.findElement(newsButton).isDisplayed());
+        Assert.assertTrue(driver.findElement(contactButton).isDisplayed());
+        Assert.assertTrue(driver.findElement(aboutButton).isDisplayed());
+
+        executor.executeScript("window.scrollBy(0, 5000)");
+        Assert.assertTrue(driver.findElement(menu).isDisplayed());
+        Assert.assertTrue(driver.findElement(homeButton).isDisplayed());
+        Assert.assertTrue(driver.findElement(newsButton).isDisplayed());
+        Assert.assertTrue(driver.findElement(contactButton).isDisplayed());
+        Assert.assertTrue(driver.findElement(aboutButton).isDisplayed());
+
+    }
+
 
 }
