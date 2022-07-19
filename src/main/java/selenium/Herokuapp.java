@@ -385,6 +385,7 @@ public class Herokuapp {
 
         By startButton = By.xpath("//button[contains(text(),'Start')]");
         Assert.assertTrue(driver.findElement(startButton).isDisplayed());
+        Assert.assertFalse(driver.findElement(By.xpath("//h4[contains(text(),'Hello World!')]")).isDisplayed());
 
         driver.findElement(startButton).click();
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//h4[contains(text(),'Hello World!')]"))));
