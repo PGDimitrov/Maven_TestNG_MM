@@ -368,6 +368,44 @@ public class Herokuapp {
         driver.get("https://the-internet.herokuapp.com/dynamic_loading");
 
         By pageTitle = By.xpath("//h3[contains(text(),'Dynamically Loaded Page Elements')]");
+        By example1Link = By.xpath("//a[@href='/dynamic_loading/1']");
+        By example1Title = By.xpath("//h4[contains(text(),'Example 1: Element on page that is hidden')]");
+        By example2Link = By.xpath("//a[@href='/dynamic_loading/2']");
+        By example2Title = By.xpath("//h4[contains(text(),'Example 2: Element rendered after the fact')]");
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(example1Link).isDisplayed());
+        Assert.assertTrue(driver.findElement(example2Link).isDisplayed());
+
+        driver.findElement(example1Link).click();
+
+        String newURL = driver.getCurrentUrl();
+        Assert.assertEquals(newURL, "https://the-internet.herokuapp.com/dynamic_loading/1");
+        Assert.assertTrue(driver.findElement(example1Title).isDisplayed());
+
+        By startButton = By.xpath("//button[contains(text(),'Start')]");
+        Assert.assertTrue(driver.findElement(startButton).isDisplayed());
+
+        driver.findElement(startButton).click();
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//h4[contains(text(),'Hello World!')]"))));
+
+        driver.get("https://the-internet.herokuapp.com/dynamic_loading");
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(example1Link).isDisplayed());
+        Assert.assertTrue(driver.findElement(example2Link).isDisplayed());
+
+        driver.findElement(example2Link).click();
+
+        String newUrlExample2 = driver.getCurrentUrl();
+        Assert.assertEquals(newUrlExample2, "https://the-internet.herokuapp.com/dynamic_loading/2");
+        Assert.assertTrue(driver.findElement(example2Title).isDisplayed());
+
+        By startButtonExample2 = By.xpath("//button[contains(text(),'Start')]");
+        Assert.assertTrue(driver.findElement(startButtonExample2).isDisplayed());
+
+        driver.findElement(startButtonExample2).click();
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//h4[contains(text(),'Hello World!')]"))));
 
     }
 

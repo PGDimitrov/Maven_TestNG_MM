@@ -62,8 +62,8 @@
       <recent name="com.mentormate" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Herokuapp.testRedirectLink">
-    <configuration name="Herokuapp.testDynamicControls" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.Herokuapp.testDynamicLoading">
+    <configuration name="Herokuapp.testDynamicLoading" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Maven_TestNG_MM_PetarDimitrov" />
       <extension name="coverage">
         <pattern>
@@ -73,7 +73,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="selenium" />
       <option name="MAIN_CLASS_NAME" value="selenium.Herokuapp" />
-      <option name="METHOD_NAME" value="testDynamicControls" />
+      <option name="METHOD_NAME" value="testDynamicLoading" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -155,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Herokuapp.testDynamicLoading" />
         <item itemvalue="TestNG.Herokuapp.testRedirectLink" />
         <item itemvalue="TestNG.Herokuapp.testMultipleWindows" />
         <item itemvalue="TestNG.Herokuapp.testHovers" />
         <item itemvalue="TestNG.Herokuapp.testFloatingMenu" />
-        <item itemvalue="TestNG.Herokuapp.testDynamicControls" />
       </list>
     </recent_temporary>
   </component>
@@ -354,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658241599372</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Homework_Lesson_19_practice">
+      <created>1658242617781</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1658242617781</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
