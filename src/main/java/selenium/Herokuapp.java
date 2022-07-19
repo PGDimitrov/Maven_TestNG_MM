@@ -17,6 +17,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.Executor;
 
 public class Herokuapp {
@@ -51,7 +52,8 @@ public class Herokuapp {
     @AfterMethod
     public void tearDown() {
 
-        driver.close();
+//        driver.close();
+        driver.quit();
     }
 
     @Test
@@ -442,5 +444,33 @@ public class Herokuapp {
 
     }
 
+    @Test
+    public void testMultipleWindows () {
+
+        driver.get("https://the-internet.herokuapp.com/windows");
+
+        By pageTitle = By.xpath("//h3[contains(text(),'Opening a new window')]");
+        By clickHereButton = By.xpath("//a[contains(text(),'Click Here')]");
+        By newWindowTitle = By.xpath("//h3[contains(text(),'New Window')]");
+
+        Assert.assertTrue(driver.findElement(pageTitle).isDisplayed());
+        Assert.assertTrue(driver.findElement(clickHereButton).isDisplayed());
+
+        String originalWindow = driver.getWindowHandle();
+
+        driver.findElement(clickHereButton).click();
+
+//        Set<String> windowsHandles = driver.getWindowHandles();
+//        driver.switchTo().window("New Window");
+        for (String winHandle : driver.getWindowHandles()
+        ){
+            driver.switchTo().window(winHandle);
+        };
+
+        String newWindow = driver.getWindowHandle();
+
+        Assert.assertTrue(driver.findElement(newWindowTitle).isDisplayed());
+
+    }
 
 }
