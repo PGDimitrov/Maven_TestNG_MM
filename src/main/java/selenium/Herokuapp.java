@@ -395,6 +395,51 @@ public class Herokuapp {
         Assert.assertTrue(driver.findElement(contactButton).isDisplayed());
         Assert.assertTrue(driver.findElement(aboutButton).isDisplayed());
 
+        executor.executeScript("window.scrollBy(0, -2000)");
+        Assert.assertTrue(driver.findElement(menu).isDisplayed());
+        Assert.assertTrue(driver.findElement(homeButton).isDisplayed());
+        Assert.assertTrue(driver.findElement(newsButton).isDisplayed());
+        Assert.assertTrue(driver.findElement(contactButton).isDisplayed());
+        Assert.assertTrue(driver.findElement(aboutButton).isDisplayed());
+
+    }
+
+    @Test
+    public void testHovers () {
+
+        driver.get("https://the-internet.herokuapp.com/hovers");
+
+        By pageTitle = By.xpath("//h3[contains(text(),'Hovers')]");
+        WebElement figureLeft = driver.findElement(By.xpath("//div[@class='example']/div[1]"));
+        By nameUser1 = By.xpath("//h5[contains(text(),'name: user1')]");
+        By linkProfileUser1 = By.xpath("//a[@href='/users/1']");
+
+        WebElement figureMiddle = driver.findElement(By.xpath("//div[@class='example']/div[2]"));
+        By nameUser2 = By.xpath("//h5[contains(text(),'name: user2')]");
+        By linkProfileUser2 = By.xpath("//a[@href='/users/2']");
+
+        WebElement figureRight = driver.findElement(By.xpath("//div[@class='example']/div[3]"));
+        By nameUser3 = By.xpath("//h5[contains(text(),'name: user3')]");
+        By linkProfileUser3 = By.xpath("//a[@href='/users/3']");
+
+        actions.moveToElement(figureLeft).perform();
+        Assert.assertTrue(driver.findElement(nameUser1).isDisplayed());
+        Assert.assertTrue(driver.findElement(linkProfileUser1).isDisplayed());
+        Assert.assertFalse(driver.findElement(linkProfileUser2).isDisplayed());
+        Assert.assertFalse(driver.findElement(linkProfileUser3).isDisplayed());
+
+        actions.moveToElement(figureMiddle).perform();
+        Assert.assertTrue(driver.findElement(nameUser2).isDisplayed());
+        Assert.assertTrue(driver.findElement(linkProfileUser2).isDisplayed());
+        Assert.assertFalse(driver.findElement(linkProfileUser1).isDisplayed());
+        Assert.assertFalse(driver.findElement(linkProfileUser3).isDisplayed());
+
+        actions.moveToElement(figureRight).perform();
+        Assert.assertTrue(driver.findElement(nameUser3).isDisplayed());
+        Assert.assertTrue(driver.findElement(linkProfileUser3).isDisplayed());
+        Assert.assertFalse(driver.findElement(linkProfileUser1).isDisplayed());
+        Assert.assertFalse(driver.findElement(linkProfileUser2).isDisplayed());
+
     }
 
 
